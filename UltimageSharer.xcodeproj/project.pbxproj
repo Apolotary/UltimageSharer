@@ -1,0 +1,282 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CEF3791315B5CE050062ADFB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF3791215B5CE050062ADFB /* UIKit.framework */; };
+		CEF3791515B5CE050062ADFB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF3791415B5CE050062ADFB /* Foundation.framework */; };
+		CEF3791715B5CE050062ADFB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF3791615B5CE050062ADFB /* CoreGraphics.framework */; };
+		CEF3791D15B5CE050062ADFB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CEF3791B15B5CE050062ADFB /* InfoPlist.strings */; };
+		CEF3791F15B5CE050062ADFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF3791E15B5CE050062ADFB /* main.m */; };
+		CEF3792315B5CE050062ADFB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF3792215B5CE050062ADFB /* AppDelegate.m */; };
+		CEF3792615B5CE050062ADFB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF3792515B5CE050062ADFB /* ViewController.m */; };
+		CEF3792915B5CE050062ADFB /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF3792715B5CE050062ADFB /* ViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CEF3790E15B5CE050062ADFB /* UltimageSharer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UltimageSharer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEF3791215B5CE050062ADFB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CEF3791415B5CE050062ADFB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CEF3791615B5CE050062ADFB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CEF3791A15B5CE050062ADFB /* UltimageSharer-Info.plist */ = {isa = PBXFileReference; path = "UltimageSharer-Info.plist"; sourceTree = "<group>"; };
+		CEF3791C15B5CE050062ADFB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CEF3791E15B5CE050062ADFB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CEF3792015B5CE050062ADFB /* UltimageSharer-Prefix.pch */ = {isa = PBXFileReference; path = "UltimageSharer-Prefix.pch"; sourceTree = "<group>"; };
+		CEF3792115B5CE050062ADFB /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		CEF3792215B5CE050062ADFB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CEF3792415B5CE050062ADFB /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		CEF3792515B5CE050062ADFB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CEF3792815B5CE050062ADFB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CEF3790B15B5CE050062ADFB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEF3791315B5CE050062ADFB /* UIKit.framework in Frameworks */,
+				CEF3791515B5CE050062ADFB /* Foundation.framework in Frameworks */,
+				CEF3791715B5CE050062ADFB /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CEF3790315B5CE050062ADFB = {
+			isa = PBXGroup;
+			children = (
+				CEF3791815B5CE050062ADFB /* UltimageSharer */,
+				CEF3791115B5CE050062ADFB /* Frameworks */,
+				CEF3790F15B5CE050062ADFB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CEF3790F15B5CE050062ADFB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CEF3790E15B5CE050062ADFB /* UltimageSharer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CEF3791115B5CE050062ADFB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CEF3791215B5CE050062ADFB /* UIKit.framework */,
+				CEF3791415B5CE050062ADFB /* Foundation.framework */,
+				CEF3791615B5CE050062ADFB /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CEF3791815B5CE050062ADFB /* UltimageSharer */ = {
+			isa = PBXGroup;
+			children = (
+				CEF3792115B5CE050062ADFB /* AppDelegate.h */,
+				CEF3792215B5CE050062ADFB /* AppDelegate.m */,
+				CEF3792415B5CE050062ADFB /* ViewController.h */,
+				CEF3792515B5CE050062ADFB /* ViewController.m */,
+				CEF3792715B5CE050062ADFB /* ViewController.xib */,
+				CEF3791915B5CE050062ADFB /* Supporting Files */,
+			);
+			path = UltimageSharer;
+			sourceTree = "<group>";
+		};
+		CEF3791915B5CE050062ADFB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CEF3791A15B5CE050062ADFB /* UltimageSharer-Info.plist */,
+				CEF3791B15B5CE050062ADFB /* InfoPlist.strings */,
+				CEF3791E15B5CE050062ADFB /* main.m */,
+				CEF3792015B5CE050062ADFB /* UltimageSharer-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CEF3790D15B5CE050062ADFB /* UltimageSharer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEF3792C15B5CE050062ADFB /* Build configuration list for PBXNativeTarget "UltimageSharer" */;
+			buildPhases = (
+				CEF3790A15B5CE050062ADFB /* Sources */,
+				CEF3790B15B5CE050062ADFB /* Frameworks */,
+				CEF3790C15B5CE050062ADFB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UltimageSharer;
+			productName = UltimageSharer;
+			productReference = CEF3790E15B5CE050062ADFB /* UltimageSharer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CEF3790515B5CE050062ADFB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = sibers;
+			};
+			buildConfigurationList = CEF3790815B5CE050062ADFB /* Build configuration list for PBXProject "UltimageSharer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CEF3790315B5CE050062ADFB;
+			productRefGroup = CEF3790F15B5CE050062ADFB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CEF3790D15B5CE050062ADFB /* UltimageSharer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CEF3790C15B5CE050062ADFB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEF3791D15B5CE050062ADFB /* InfoPlist.strings in Resources */,
+				CEF3792915B5CE050062ADFB /* ViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CEF3790A15B5CE050062ADFB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEF3791F15B5CE050062ADFB /* main.m in Sources */,
+				CEF3792315B5CE050062ADFB /* AppDelegate.m in Sources */,
+				CEF3792615B5CE050062ADFB /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CEF3791B15B5CE050062ADFB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEF3791C15B5CE050062ADFB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		CEF3792715B5CE050062ADFB /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEF3792815B5CE050062ADFB /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CEF3792A15B5CE050062ADFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CEF3792B15B5CE050062ADFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CEF3792D15B5CE050062ADFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UltimageSharer/UltimageSharer-Prefix.pch";
+				INFOPLIST_FILE = "UltimageSharer/UltimageSharer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CEF3792E15B5CE050062ADFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UltimageSharer/UltimageSharer-Prefix.pch";
+				INFOPLIST_FILE = "UltimageSharer/UltimageSharer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CEF3790815B5CE050062ADFB /* Build configuration list for PBXProject "UltimageSharer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEF3792A15B5CE050062ADFB /* Debug */,
+				CEF3792B15B5CE050062ADFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEF3792C15B5CE050062ADFB /* Build configuration list for PBXNativeTarget "UltimageSharer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEF3792D15B5CE050062ADFB /* Debug */,
+				CEF3792E15B5CE050062ADFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CEF3790515B5CE050062ADFB /* Project object */;
+}
