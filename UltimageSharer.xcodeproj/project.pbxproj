@@ -7,30 +7,54 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE7A85E215B5D8AD0056C0E9 /* libAviarySDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7A85DF15B5D8AD0056C0E9 /* libAviarySDK.a */; };
+		CE7A85E315B5D8AD0056C0E9 /* AviarySDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CE7A85E115B5D8AD0056C0E9 /* AviarySDKResources.bundle */; };
+		CE7A85E515B5D9020056C0E9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7A85E415B5D9020056C0E9 /* QuartzCore.framework */; };
+		CE7A85E715B5D9060056C0E9 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7A85E615B5D9060056C0E9 /* Accelerate.framework */; };
+		CE7A85E915B5D90D0056C0E9 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7A85E815B5D90D0056C0E9 /* StoreKit.framework */; };
+		CE7A85EB15B5D91F0056C0E9 /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7A85EA15B5D91F0056C0E9 /* libz.1.2.5.dylib */; };
+		CE7A85ED15B5D92B0056C0E9 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7A85EC15B5D92B0056C0E9 /* libsqlite3.0.dylib */; };
+		CE7A85EF15B5D9320056C0E9 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7A85EE15B5D9320056C0E9 /* CoreData.framework */; };
+		CE7A85F315B5DE7A0056C0E9 /* ImageTools.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7A85F215B5DE7A0056C0E9 /* ImageTools.m */; };
 		CEF3791315B5CE050062ADFB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF3791215B5CE050062ADFB /* UIKit.framework */; };
 		CEF3791515B5CE050062ADFB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF3791415B5CE050062ADFB /* Foundation.framework */; };
 		CEF3791715B5CE050062ADFB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF3791615B5CE050062ADFB /* CoreGraphics.framework */; };
 		CEF3791D15B5CE050062ADFB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CEF3791B15B5CE050062ADFB /* InfoPlist.strings */; };
 		CEF3791F15B5CE050062ADFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF3791E15B5CE050062ADFB /* main.m */; };
 		CEF3792315B5CE050062ADFB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF3792215B5CE050062ADFB /* AppDelegate.m */; };
-		CEF3792615B5CE050062ADFB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF3792515B5CE050062ADFB /* ViewController.m */; };
-		CEF3792915B5CE050062ADFB /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF3792715B5CE050062ADFB /* ViewController.xib */; };
+		CEF3792615B5CE050062ADFB /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF3792515B5CE050062ADFB /* MainViewController.m */; };
+		CEF3792915B5CE050062ADFB /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF3792715B5CE050062ADFB /* MainViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE7A85DA15B5D8AD0056C0E9 /* AFPhotoEditorContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPhotoEditorContext.h; sourceTree = "<group>"; };
+		CE7A85DB15B5D8AD0056C0E9 /* AFPhotoEditorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPhotoEditorController.h; sourceTree = "<group>"; };
+		CE7A85DC15B5D8AD0056C0E9 /* AFPhotoEditorControllerOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPhotoEditorControllerOptions.h; sourceTree = "<group>"; };
+		CE7A85DD15B5D8AD0056C0E9 /* AFPhotoEditorSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPhotoEditorSession.h; sourceTree = "<group>"; };
+		CE7A85DE15B5D8AD0056C0E9 /* AFPhotoEditorStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPhotoEditorStyle.h; sourceTree = "<group>"; };
+		CE7A85DF15B5D8AD0056C0E9 /* libAviarySDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAviarySDK.a; sourceTree = "<group>"; };
+		CE7A85E115B5D8AD0056C0E9 /* AviarySDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AviarySDKResources.bundle; sourceTree = "<group>"; };
+		CE7A85E415B5D9020056C0E9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		CE7A85E615B5D9060056C0E9 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		CE7A85E815B5D90D0056C0E9 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		CE7A85EA15B5D91F0056C0E9 /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
+		CE7A85EC15B5D92B0056C0E9 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		CE7A85EE15B5D9320056C0E9 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		CE7A85F115B5DE7A0056C0E9 /* ImageTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageTools.h; sourceTree = "<group>"; };
+		CE7A85F215B5DE7A0056C0E9 /* ImageTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageTools.m; sourceTree = "<group>"; };
 		CEF3790E15B5CE050062ADFB /* UltimageSharer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UltimageSharer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF3791215B5CE050062ADFB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CEF3791415B5CE050062ADFB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CEF3791615B5CE050062ADFB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		CEF3791A15B5CE050062ADFB /* UltimageSharer-Info.plist */ = {isa = PBXFileReference; path = "UltimageSharer-Info.plist"; sourceTree = "<group>"; };
+		CEF3791A15B5CE050062ADFB /* UltimageSharer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UltimageSharer-Info.plist"; sourceTree = "<group>"; };
 		CEF3791C15B5CE050062ADFB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CEF3791E15B5CE050062ADFB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		CEF3792015B5CE050062ADFB /* UltimageSharer-Prefix.pch */ = {isa = PBXFileReference; path = "UltimageSharer-Prefix.pch"; sourceTree = "<group>"; };
-		CEF3792115B5CE050062ADFB /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		CEF3792015B5CE050062ADFB /* UltimageSharer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UltimageSharer-Prefix.pch"; sourceTree = "<group>"; };
+		CEF3792115B5CE050062ADFB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CEF3792215B5CE050062ADFB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CEF3792415B5CE050062ADFB /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
-		CEF3792515B5CE050062ADFB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		CEF3792815B5CE050062ADFB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		CEF3792415B5CE050062ADFB /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		CEF3792515B5CE050062ADFB /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		CEF3792815B5CE050062ADFB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,15 +62,69 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE7A85EF15B5D9320056C0E9 /* CoreData.framework in Frameworks */,
+				CE7A85ED15B5D92B0056C0E9 /* libsqlite3.0.dylib in Frameworks */,
+				CE7A85EB15B5D91F0056C0E9 /* libz.1.2.5.dylib in Frameworks */,
+				CE7A85E915B5D90D0056C0E9 /* StoreKit.framework in Frameworks */,
+				CE7A85E715B5D9060056C0E9 /* Accelerate.framework in Frameworks */,
+				CE7A85E515B5D9020056C0E9 /* QuartzCore.framework in Frameworks */,
 				CEF3791315B5CE050062ADFB /* UIKit.framework in Frameworks */,
 				CEF3791515B5CE050062ADFB /* Foundation.framework in Frameworks */,
 				CEF3791715B5CE050062ADFB /* CoreGraphics.framework in Frameworks */,
+				CE7A85E215B5D8AD0056C0E9 /* libAviarySDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE7A85D615B5D8980056C0E9 /* 3rd-party */ = {
+			isa = PBXGroup;
+			children = (
+				CE7A85D815B5D8AD0056C0E9 /* AviarySDK */,
+			);
+			name = "3rd-party";
+			sourceTree = "<group>";
+		};
+		CE7A85D815B5D8AD0056C0E9 /* AviarySDK */ = {
+			isa = PBXGroup;
+			children = (
+				CE7A85D915B5D8AD0056C0E9 /* Headers */,
+				CE7A85DF15B5D8AD0056C0E9 /* libAviarySDK.a */,
+				CE7A85E015B5D8AD0056C0E9 /* Resources */,
+			);
+			path = AviarySDK;
+			sourceTree = "<group>";
+		};
+		CE7A85D915B5D8AD0056C0E9 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				CE7A85DA15B5D8AD0056C0E9 /* AFPhotoEditorContext.h */,
+				CE7A85DB15B5D8AD0056C0E9 /* AFPhotoEditorController.h */,
+				CE7A85DC15B5D8AD0056C0E9 /* AFPhotoEditorControllerOptions.h */,
+				CE7A85DD15B5D8AD0056C0E9 /* AFPhotoEditorSession.h */,
+				CE7A85DE15B5D8AD0056C0E9 /* AFPhotoEditorStyle.h */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		CE7A85E015B5D8AD0056C0E9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CE7A85E115B5D8AD0056C0E9 /* AviarySDKResources.bundle */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CE7A85F015B5DC1C0056C0E9 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				CE7A85F115B5DE7A0056C0E9 /* ImageTools.h */,
+				CE7A85F215B5DE7A0056C0E9 /* ImageTools.m */,
+			);
+			name = Tools;
+			sourceTree = "<group>";
+		};
 		CEF3790315B5CE050062ADFB = {
 			isa = PBXGroup;
 			children = (
@@ -67,6 +145,12 @@
 		CEF3791115B5CE050062ADFB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CE7A85EE15B5D9320056C0E9 /* CoreData.framework */,
+				CE7A85EC15B5D92B0056C0E9 /* libsqlite3.0.dylib */,
+				CE7A85EA15B5D91F0056C0E9 /* libz.1.2.5.dylib */,
+				CE7A85E815B5D90D0056C0E9 /* StoreKit.framework */,
+				CE7A85E615B5D9060056C0E9 /* Accelerate.framework */,
+				CE7A85E415B5D9020056C0E9 /* QuartzCore.framework */,
 				CEF3791215B5CE050062ADFB /* UIKit.framework */,
 				CEF3791415B5CE050062ADFB /* Foundation.framework */,
 				CEF3791615B5CE050062ADFB /* CoreGraphics.framework */,
@@ -77,11 +161,12 @@
 		CEF3791815B5CE050062ADFB /* UltimageSharer */ = {
 			isa = PBXGroup;
 			children = (
+				CE7A85F015B5DC1C0056C0E9 /* Tools */,
 				CEF3792115B5CE050062ADFB /* AppDelegate.h */,
 				CEF3792215B5CE050062ADFB /* AppDelegate.m */,
-				CEF3792415B5CE050062ADFB /* ViewController.h */,
-				CEF3792515B5CE050062ADFB /* ViewController.m */,
-				CEF3792715B5CE050062ADFB /* ViewController.xib */,
+				CEF3792415B5CE050062ADFB /* MainViewController.h */,
+				CEF3792515B5CE050062ADFB /* MainViewController.m */,
+				CEF3792715B5CE050062ADFB /* MainViewController.xib */,
 				CEF3791915B5CE050062ADFB /* Supporting Files */,
 			);
 			path = UltimageSharer;
@@ -90,6 +175,7 @@
 		CEF3791915B5CE050062ADFB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CE7A85D615B5D8980056C0E9 /* 3rd-party */,
 				CEF3791A15B5CE050062ADFB /* UltimageSharer-Info.plist */,
 				CEF3791B15B5CE050062ADFB /* InfoPlist.strings */,
 				CEF3791E15B5CE050062ADFB /* main.m */,
@@ -150,7 +236,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEF3791D15B5CE050062ADFB /* InfoPlist.strings in Resources */,
-				CEF3792915B5CE050062ADFB /* ViewController.xib in Resources */,
+				CEF3792915B5CE050062ADFB /* MainViewController.xib in Resources */,
+				CE7A85E315B5D8AD0056C0E9 /* AviarySDKResources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,7 +250,8 @@
 			files = (
 				CEF3791F15B5CE050062ADFB /* main.m in Sources */,
 				CEF3792315B5CE050062ADFB /* AppDelegate.m in Sources */,
-				CEF3792615B5CE050062ADFB /* ViewController.m in Sources */,
+				CEF3792615B5CE050062ADFB /* MainViewController.m in Sources */,
+				CE7A85F315B5DE7A0056C0E9 /* ImageTools.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,12 +266,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		CEF3792715B5CE050062ADFB /* ViewController.xib */ = {
+		CEF3792715B5CE050062ADFB /* MainViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				CEF3792815B5CE050062ADFB /* en */,
 			);
-			name = ViewController.xib;
+			name = MainViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -195,7 +283,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: HireRussians LLC";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -209,8 +297,9 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
-				SDKROOT = iphoneos;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6DEC8964-3085-4754-995F-A7B3A741B085";
+				SDKROOT = iphoneos5.0;
 			};
 			name = Debug;
 		};
@@ -220,16 +309,17 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Andrey Chashkov (U4RY46T73D)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				SDKROOT = iphoneos;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7E5BB7A5-8F3C-4E5C-BFCC-355996690CB4";
+				SDKROOT = iphoneos5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -237,10 +327,17 @@
 		CEF3792D15B5CE050062ADFB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Andrey Chashkov (U4RY46T73D)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UltimageSharer/UltimageSharer-Prefix.pch";
 				INFOPLIST_FILE = "UltimageSharer/UltimageSharer-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/UltimageSharer/AviarySDK\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "2FA19F62-8C86-48F3-AD02-DFC7982989C8";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -251,6 +348,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UltimageSharer/UltimageSharer-Prefix.pch";
 				INFOPLIST_FILE = "UltimageSharer/UltimageSharer-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/UltimageSharer/AviarySDK\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -275,6 +377,7 @@
 				CEF3792E15B5CE050062ADFB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

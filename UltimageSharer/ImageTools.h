@@ -10,4 +10,11 @@
 
 @interface ImageTools : NSObject
 
++ (void) saveImage: (UIImage *) image
+          withName: (NSString *) name
+      andExtension: (NSString *) extension;
+
++ (NSURL *) getURLForImageNamed: (NSString *) name
+                  withExtension: (NSString *) extension;
+
 @end
