@@ -125,6 +125,13 @@
     }
 }
 
+#pragma mark - Facebook interaction methods
+
+- (void) facebookAuthCompleted: (NSNotification *) notification
+{
+    [_fbModel postImageToFacebookAlbum:_imageToSend];
+}
+
 #pragma mark - TableView methods
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -224,7 +231,15 @@
         }
         else if ([networkName isEqualToString:@"Facebook"])
         {
-            
+            if ([_fbModel isUserAlreadyAuthorizedViaFacebook])
+            {
+                [_fbModel postImageToFacebookAlbum:_imageToSend];
+            }
+            else
+            {
+                [_fbModel facebookAuthorize];
+                [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(facebookAuthCompleted:) name:kNotificationFacebookAuthCompleted object:nil];
+            }
         }
         else if ([networkName isEqualToString:@"tumblr"])
         {
@@ -276,6 +291,7 @@
     [self initializeNamesArrays];
     
     _hud = [[MBProgressHUD alloc] initWithWindow:[[UIApplication sharedApplication] keyWindow]];
+    _fbModel = [[FacebookModel alloc] init];
 }
 
 - (void)viewDidUnload

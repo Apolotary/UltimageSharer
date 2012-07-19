@@ -7,7 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "FBConnect.h"
 
-@interface FacebookModel : NSObject
+@interface FacebookModel : NSObject <FBSessionDelegate, FBDialogDelegate, FBRequestDelegate>
+{
+    Facebook *_facebook;
+}
+
+- (void) facebookAuthorize;
+- (void) facebookLogout;
+- (void) postImageToFacebookAlbum:(UIImage *)image;
+- (BOOL) isUserAlreadyAuthorizedViaFacebook;
 
 @end

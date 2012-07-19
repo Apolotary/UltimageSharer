@@ -25,6 +25,9 @@
 		6DBA695515B7EE1A0043E93F /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA694515B7EE190043E93F /* SBJsonParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6DBA695615B7EE1A0043E93F /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA694715B7EE190043E93F /* SBJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6DBA695C15B7F2080043E93F /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA695A15B7F2080043E93F /* MBProgressHUD.m */; };
+		6DBA695F15B7FA050043E93F /* APIKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA695E15B7FA050043E93F /* APIKeys.m */; };
+		6DBA696215B7FD1A0043E93F /* DefaultKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA696115B7FD1A0043E93F /* DefaultKeys.m */; };
+		6DBA696515B802BF0043E93F /* Notifications.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA696415B802BB0043E93F /* Notifications.m */; };
 		CE7A85E215B5D8AD0056C0E9 /* libAviarySDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7A85DF15B5D8AD0056C0E9 /* libAviarySDK.a */; };
 		CE7A85E315B5D8AD0056C0E9 /* AviarySDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CE7A85E115B5D8AD0056C0E9 /* AviarySDKResources.bundle */; };
 		CE7A85E515B5D9020056C0E9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7A85E415B5D9020056C0E9 /* QuartzCore.framework */; };
@@ -91,6 +94,12 @@
 		6DBA694715B7EE190043E93F /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		6DBA695A15B7F2080043E93F /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		6DBA695B15B7F2080043E93F /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		6DBA695D15B7FA040043E93F /* APIKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIKeys.h; sourceTree = "<group>"; };
+		6DBA695E15B7FA050043E93F /* APIKeys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIKeys.m; sourceTree = "<group>"; };
+		6DBA696015B7FD1A0043E93F /* DefaultKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultKeys.h; sourceTree = "<group>"; };
+		6DBA696115B7FD1A0043E93F /* DefaultKeys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultKeys.m; sourceTree = "<group>"; };
+		6DBA696315B802BA0043E93F /* Notifications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notifications.h; sourceTree = "<group>"; };
+		6DBA696415B802BB0043E93F /* Notifications.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Notifications.m; sourceTree = "<group>"; };
 		CE7A85DA15B5D8AD0056C0E9 /* AFPhotoEditorContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPhotoEditorContext.h; sourceTree = "<group>"; };
 		CE7A85DB15B5D8AD0056C0E9 /* AFPhotoEditorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPhotoEditorController.h; sourceTree = "<group>"; };
 		CE7A85DC15B5D8AD0056C0E9 /* AFPhotoEditorControllerOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPhotoEditorControllerOptions.h; sourceTree = "<group>"; };
@@ -337,6 +346,12 @@
 				CEF3791E15B5CE050062ADFB /* main.m */,
 				CEF3792015B5CE050062ADFB /* UltimageSharer-Prefix.pch */,
 				6DBA691D15B7D8230043E93F /* ToDo */,
+				6DBA695D15B7FA040043E93F /* APIKeys.h */,
+				6DBA695E15B7FA050043E93F /* APIKeys.m */,
+				6DBA696015B7FD1A0043E93F /* DefaultKeys.h */,
+				6DBA696115B7FD1A0043E93F /* DefaultKeys.m */,
+				6DBA696315B802BA0043E93F /* Notifications.h */,
+				6DBA696415B802BB0043E93F /* Notifications.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -442,6 +457,9 @@
 				6DBA695515B7EE1A0043E93F /* SBJsonParser.m in Sources */,
 				6DBA695615B7EE1A0043E93F /* SBJsonWriter.m in Sources */,
 				6DBA695C15B7F2080043E93F /* MBProgressHUD.m in Sources */,
+				6DBA695F15B7FA050043E93F /* APIKeys.m in Sources */,
+				6DBA696215B7FD1A0043E93F /* DefaultKeys.m in Sources */,
+				6DBA696515B802BF0043E93F /* Notifications.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

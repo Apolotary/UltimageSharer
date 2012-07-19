@@ -11,14 +11,7 @@
 #import <Accounts/Accounts.h>
 #import "ImageTools.h"
 #import "MBProgressHUD.h"
-
-#define DEFAULT_IMAGE_NAME      @"image"
-#define DEFAULT_IMAGE_EXTENSION @"jpg"
-
-#define INSTAGRAM_EXTENSION     @"igo"
-#define INSTAGRAM_UTI           @"com.instagram.exclusivegram"
-
-#define APP_DEFAULT_MESSAGE_TEXT @"Image sent with UltimageSharer, check out its source code at: https://github.com/Apolotary/UltimageSharer"
+#import "FacebookModel.h"
 
 @interface RecipientChooserViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UIDocumentInteractionControllerDelegate, MBProgressHUDDelegate>
 {
@@ -31,6 +24,7 @@
     
     UIDocumentInteractionController *_documentInteractionController;
     MBProgressHUD *_hud;
+    FacebookModel *_fbModel;
 }
 
 @property (nonatomic, strong) UIImage *imageToSend;
