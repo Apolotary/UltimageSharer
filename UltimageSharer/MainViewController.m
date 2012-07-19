@@ -52,6 +52,26 @@
     [self presentModalViewController:_imagePicker animated:YES];
 }
 
+#pragma mark - Twitter methods
+
+- (void) sendTweetWithText: (NSString *) text
+                  andImage: (UIImage *) image
+{
+    TWTweetComposeViewController *tweetViewController = [[TWTweetComposeViewController alloc] init];
+    
+    // Set the initial tweet text. See the framework for additional properties that can be set.
+    [tweetViewController setInitialText:text];
+    [tweetViewController addImage:image];
+    
+    // Create the completion handler block.
+    [tweetViewController setCompletionHandler:^(TWTweetComposeViewControllerResult result) {
+        [self dismissModalViewControllerAnimated:YES];
+    }];
+    
+    // Present the tweet composition view controller modally.
+    [self presentModalViewController:tweetViewController animated:YES];
+}
+
 #pragma mark - Showing Aviary controller
 
 - (void) showAviaryPhotoEditorWithImage: (UIImage *) image
@@ -90,10 +110,11 @@
 
 #pragma mark - Saving images methods
 
-- (NSURL *) saveImageForInstagramAndGetPath: (UIImage *) image
+- (NSURL *) saveAndGetPathForImage: (UIImage *) image 
+                     withExtension: (NSString *) extension
 {
-    [ImageTools saveImage:_imageToWorkWith withName:DEFAULT_IMAGE_NAME andExtension:INSTAGRAM_EXTENSION];
-    return [ImageTools getURLForImageNamed:DEFAULT_IMAGE_NAME withExtension:INSTAGRAM_EXTENSION];
+    [ImageTools saveImage:_imageToWorkWith withName:DEFAULT_IMAGE_NAME andExtension:extension];
+    return [ImageTools getURLForImageNamed:DEFAULT_IMAGE_NAME withExtension:extension];
 }
 
 #pragma mark - UIImagePicker Delegate Methods
@@ -149,12 +170,22 @@
             {
                 [self showAviaryPhotoEditorWithImage:_imageToWorkWith];
             }
-            else if (buttonIndex == 1) // Instagram
+            else if (buttonIndex == 1) // any image app or dropbox
             {
-                NSURL *fileURL = [self saveImageForInstagramAndGetPath:_imageToWorkWith];
+                NSURL *fileURL = [self saveAndGetPathForImage:_imageToWorkWith withExtension:DEFAULT_IMAGE_EXTENSION];
+                [self setupControllerWithURL:fileURL usingDelegate:self];
+                [_documentInteractionController presentOpenInMenuFromRect:CGRectZero inView:self.view animated:YES];
+            }
+            else if (buttonIndex == 2) // instagram
+            {
+                NSURL *fileURL = [self saveAndGetPathForImage:_imageToWorkWith withExtension:INSTAGRAM_EXTENSION];
                 [self setupControllerWithURL:fileURL usingDelegate:self];
                 [_documentInteractionController setUTI:INSTAGRAM_UTI];
                 [_documentInteractionController presentOpenInMenuFromRect:CGRectZero inView:self.view animated:YES];
+            }
+            else if (buttonIndex == 3) // twitter
+            {
+                [self sendTweetWithText:APP_DEFAULT_MESSAGE_TEXT andImage:_imageToWorkWith];
             }
         }
     }
@@ -182,7 +213,7 @@
 {
     _imageWorkingMode = kImageWorkingModeSharing;
 
-    UIActionSheet *shareActionSheet = [[UIActionSheet alloc] initWithTitle:@"Share" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Edit in Aviary", @"Instagram", nil];
+    UIActionSheet *shareActionSheet = [[UIActionSheet alloc] initWithTitle:@"Share" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Edit in Aviary", @"Dropbox", @"Instagram", @"Twitter", nil];
     [shareActionSheet showInView:self.view];
 }
 

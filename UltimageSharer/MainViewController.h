@@ -8,12 +8,19 @@
 //  
 
 #import <UIKit/UIKit.h>
+#import <Twitter/Twitter.h>
+#import <Accounts/Accounts.h>
 #import "AFPhotoEditorController.h"
 #import "ImageTools.h"
 
-#define DEFAULT_IMAGE_NAME  @"image"
-#define INSTAGRAM_EXTENSION @"igo"
-#define INSTAGRAM_UTI       @"com.instagram.exclusivegram"
+
+#define DEFAULT_IMAGE_NAME      @"image"
+#define DEFAULT_IMAGE_EXTENSION @"jpg"
+
+#define INSTAGRAM_EXTENSION     @"igo"
+#define INSTAGRAM_UTI           @"com.instagram.exclusivegram"
+
+#define APP_DEFAULT_MESSAGE_TEXT @"Image sent with UltimageSharer, check out its source code at: https://github.com/Apolotary/UltimageSharer"
 
 typedef enum {
     kImageWorkingModeOpening = 1,

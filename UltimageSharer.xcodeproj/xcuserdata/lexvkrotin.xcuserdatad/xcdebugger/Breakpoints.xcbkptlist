@@ -9,11 +9,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "UltimageSharer/MainViewController.m"
-         timestampString = "364283374.393012"
+         timestampString = "364368435.624554"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "78"
-         endingLineNumber = "78"
+         startingLineNumber = "98"
+         endingLineNumber = "98"
          landmarkName = "-documentInteractionController:willBeginSendingToApplication:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -23,11 +23,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "UltimageSharer/MainViewController.m"
-         timestampString = "364283374.393012"
+         timestampString = "364368435.624554"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "83"
-         endingLineNumber = "83"
+         startingLineNumber = "103"
+         endingLineNumber = "103"
          landmarkName = "-documentInteractionController:didEndSendingToApplication:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -37,11 +37,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "UltimageSharer/MainViewController.m"
-         timestampString = "364284230.958992"
+         timestampString = "364368435.624554"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "156"
-         endingLineNumber = "156"
+         startingLineNumber = "183"
+         endingLineNumber = "183"
          landmarkName = "-actionSheet:clickedButtonAtIndex:"
          landmarkType = "5">
       </FileBreakpoint>

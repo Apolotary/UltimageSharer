@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6DBA68E515B7CEB50043E93F /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DBA68E415B7CEB50043E93F /* Twitter.framework */; };
 		CE7A85E215B5D8AD0056C0E9 /* libAviarySDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7A85DF15B5D8AD0056C0E9 /* libAviarySDK.a */; };
 		CE7A85E315B5D8AD0056C0E9 /* AviarySDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CE7A85E115B5D8AD0056C0E9 /* AviarySDKResources.bundle */; };
 		CE7A85E515B5D9020056C0E9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7A85E415B5D9020056C0E9 /* QuartzCore.framework */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6DBA68E415B7CEB50043E93F /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		CE7A85DA15B5D8AD0056C0E9 /* AFPhotoEditorContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPhotoEditorContext.h; sourceTree = "<group>"; };
 		CE7A85DB15B5D8AD0056C0E9 /* AFPhotoEditorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPhotoEditorController.h; sourceTree = "<group>"; };
 		CE7A85DC15B5D8AD0056C0E9 /* AFPhotoEditorControllerOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPhotoEditorControllerOptions.h; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DBA68E515B7CEB50043E93F /* Twitter.framework in Frameworks */,
 				CE7A85EF15B5D9320056C0E9 /* CoreData.framework in Frameworks */,
 				CE7A85ED15B5D92B0056C0E9 /* libsqlite3.0.dylib in Frameworks */,
 				CE7A85EB15B5D91F0056C0E9 /* libz.1.2.5.dylib in Frameworks */,
@@ -145,6 +148,7 @@
 		CEF3791115B5CE050062ADFB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6DBA68E415B7CEB50043E93F /* Twitter.framework */,
 				CE7A85EE15B5D9320056C0E9 /* CoreData.framework */,
 				CE7A85EC15B5D92B0056C0E9 /* libsqlite3.0.dylib */,
 				CE7A85EA15B5D91F0056C0E9 /* libz.1.2.5.dylib */,
