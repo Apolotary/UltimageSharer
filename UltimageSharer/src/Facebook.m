@@ -331,7 +331,7 @@ static void *finishedContext = @"finishedContext";
 - (void)authorize:(NSArray *)permissions {
     self.permissions = permissions;
     
-    [self authorizeWithFBAppAuth:YES safariAuth:NO];
+    [self authorizeWithFBAppAuth:YES safariAuth:YES];
 }
 
 /**
@@ -427,14 +427,14 @@ static void *finishedContext = @"finishedContext";
         // If the error response indicates that we should try again using Safari, open
         // the authorization dialog in Safari.
         if (errorReason && [errorReason isEqualToString:@"service_disabled_use_browser"]) {
-            [self authorizeWithFBAppAuth:YES safariAuth:NO];
+            [self authorizeWithFBAppAuth:NO safariAuth:YES];
             return YES;
         }
         
         // If the error response indicates that we should try the authorization flow
         // in an inline dialog, do that.
         if (errorReason && [errorReason isEqualToString:@"service_disabled"]) {
-            [self authorizeWithFBAppAuth:YES safariAuth:NO];
+            [self authorizeWithFBAppAuth:NO safariAuth:NO];
             return YES;
         }
         
