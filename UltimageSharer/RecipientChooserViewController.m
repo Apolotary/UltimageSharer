@@ -28,6 +28,30 @@
     
     // Release any cached data, images, etc that aren't in use.
 }
+#pragma mark HUD methods
+
+- (void) freezeInterface
+{
+    // Add HUD to screen    
+    [_hud setFrame:CGRectMake(0, 0, 320, 431)];
+    [[[UIApplication sharedApplication] keyWindow] addSubview:_hud];
+	
+    // Regisete for HUD callbacks so we can remove it from the window at the right time
+    _hud.delegate = self;
+	
+    _hud.labelText = @"Loading";
+	[_hud show:YES];
+}
+
+- (void) unFreezeInterface
+{
+    [_hud removeFromSuperview];
+}
+
+- (void)hudWasHidden
+{
+    
+}
 
 #pragma mark - Twitter methods
 
@@ -43,6 +67,7 @@
     // Create the completion handler block.
     [tweetViewController setCompletionHandler:^(TWTweetComposeViewControllerResult result) {
         [self dismissModalViewControllerAnimated:YES];
+        [self unFreezeInterface];
     }];
     
     // Present the tweet composition view controller modally.
@@ -64,16 +89,17 @@
 - (void)documentInteractionController:(UIDocumentInteractionController *)controller willBeginSendingToApplication:(NSString *)application
 {
     NSLog(@"%@", application);
+
 }
 
 - (void)documentInteractionController:(UIDocumentInteractionController *)controller didEndSendingToApplication:(NSString *)application
 {
-    
+
 }
 
 -(void)documentInteractionControllerDidDismissOpenInMenu: (UIDocumentInteractionController *)controller 
 {
-    
+
 }
 
 #pragma mark - Saving images methods
@@ -95,6 +121,7 @@
     {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success" message:@"Saved!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [alert show];
+        [self unFreezeInterface];
     }
 }
 
@@ -174,7 +201,7 @@
             [_documentInteractionController setUTI:INSTAGRAM_UTI];
             [_documentInteractionController presentOpenInMenuFromRect:CGRectZero inView:self.view animated:YES];
         }
-        else if ([appName isEqualToString:@"Dropbox"])
+        else if ([appName isEqualToString:@"Dropbox / all image apps"])
         {
             NSURL *fileURL = [self saveAndGetPathForImage:_imageToSend withExtension:DEFAULT_IMAGE_EXTENSION];
             [self setupControllerWithURL:fileURL usingDelegate:self];
@@ -182,6 +209,7 @@
         }
         else if ([appName isEqualToString:@"Photo Library"])
         {
+            [self freezeInterface];
             [ImageTools writeImage:_imageToSend toPhotoLibraryWithTarget:self andSelector:@selector(image:didFinishSavingWithError:contextInfo:)];
         }
     }
@@ -191,6 +219,7 @@
         
         if ([networkName isEqualToString:@"Twitter"])
         {
+            [self freezeInterface];
             [self sendTweetWithText:APP_DEFAULT_MESSAGE_TEXT andImage:_imageToSend];
         }
         else if ([networkName isEqualToString:@"Facebook"])
@@ -234,7 +263,7 @@
 - (void) initializeNamesArrays
 {
     _namesGroups = [NSArray arrayWithObjects:@"Apps", @"Social Networks", @"Image hosting services", nil];
-    _namesApps = [NSArray arrayWithObjects:@"Instagram", @"Dropbox", @"Photo Library", nil];
+    _namesApps = [NSArray arrayWithObjects:@"Instagram", @"Dropbox / all image apps", @"Photo Library", nil];
     _namesSocialNetworks = [NSArray arrayWithObjects:@"Twitter", @"Facebook", @"tumblr", @"Flickr", nil];
     _namesImageHostings = [NSArray arrayWithObjects:@"imgur", @"yfrog", @"twitpic", @"imageshack", nil];
 }
@@ -245,6 +274,8 @@
 {
     [super viewDidLoad];
     [self initializeNamesArrays];
+    
+    _hud = [[MBProgressHUD alloc] initWithWindow:[[UIApplication sharedApplication] keyWindow]];
 }
 
 - (void)viewDidUnload
