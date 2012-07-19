@@ -132,6 +132,15 @@
     [_fbModel postImageToFacebookAlbum:_imageToSend];
 }
 
+#pragma mark - Message composer delegate methods
+
+- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
+    [self dismissViewControllerAnimated:YES completion:^(void){
+        DLog(@"dissmissed!");
+    }];
+}
+
 #pragma mark - TableView methods
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -219,6 +228,19 @@
             [self freezeInterface];
             [ImageTools writeImage:_imageToSend toPhotoLibraryWithTarget:self andSelector:@selector(image:didFinishSavingWithError:contextInfo:)];
         }
+        else if ([appName isEqualToString:@"Email"])
+        {
+            if ([MFMailComposeViewController canSendMail])
+            {
+                NSURL *fileURL = [self saveAndGetPathForImage:_imageToSend withExtension:DEFAULT_IMAGE_EXTENSION];
+                _mailComposer = [[MFMailComposeViewController alloc] init];
+                [_mailComposer setMailComposeDelegate:self];
+                [_mailComposer setSubject:@"Ultimate Image Sharer for iOS"];
+                [_mailComposer setMessageBody:APP_DEFAULT_MESSAGE_TEXT isHTML:NO];
+                [_mailComposer addAttachmentData:[NSData dataWithContentsOfURL:fileURL] mimeType:@"image/jpeg" fileName:@"image.jpg"];
+                [self presentModalViewController:_mailComposer animated:YES];
+            }
+        }
     }
     else if (indexPath.section == 1) // networks
     {
@@ -278,7 +300,7 @@
 - (void) initializeNamesArrays
 {
     _namesGroups = [NSArray arrayWithObjects:@"Apps", @"Social Networks", @"Image hosting services", nil];
-    _namesApps = [NSArray arrayWithObjects:@"Instagram", @"Dropbox / all image apps", @"Photo Library", nil];
+    _namesApps = [NSArray arrayWithObjects:@"Instagram", @"Dropbox / all image apps", @"Photo Library", @"Email", nil];
     _namesSocialNetworks = [NSArray arrayWithObjects:@"Twitter", @"Facebook", @"tumblr", @"Flickr", nil];
     _namesImageHostings = [NSArray arrayWithObjects:@"imgur", @"yfrog", @"twitpic", @"imageshack", nil];
 }

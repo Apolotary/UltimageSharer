@@ -28,6 +28,7 @@
 		6DBA695F15B7FA050043E93F /* APIKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA695E15B7FA050043E93F /* APIKeys.m */; };
 		6DBA696215B7FD1A0043E93F /* DefaultKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA696115B7FD1A0043E93F /* DefaultKeys.m */; };
 		6DBA696515B802BF0043E93F /* Notifications.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA696415B802BB0043E93F /* Notifications.m */; };
+		6DBA696B15B805A30043E93F /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DBA696A15B805A30043E93F /* MessageUI.framework */; };
 		CE7A85E215B5D8AD0056C0E9 /* libAviarySDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7A85DF15B5D8AD0056C0E9 /* libAviarySDK.a */; };
 		CE7A85E315B5D8AD0056C0E9 /* AviarySDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CE7A85E115B5D8AD0056C0E9 /* AviarySDKResources.bundle */; };
 		CE7A85E515B5D9020056C0E9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7A85E415B5D9020056C0E9 /* QuartzCore.framework */; };
@@ -100,6 +101,7 @@
 		6DBA696115B7FD1A0043E93F /* DefaultKeys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultKeys.m; sourceTree = "<group>"; };
 		6DBA696315B802BA0043E93F /* Notifications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notifications.h; sourceTree = "<group>"; };
 		6DBA696415B802BB0043E93F /* Notifications.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Notifications.m; sourceTree = "<group>"; };
+		6DBA696A15B805A30043E93F /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		CE7A85DA15B5D8AD0056C0E9 /* AFPhotoEditorContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPhotoEditorContext.h; sourceTree = "<group>"; };
 		CE7A85DB15B5D8AD0056C0E9 /* AFPhotoEditorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPhotoEditorController.h; sourceTree = "<group>"; };
 		CE7A85DC15B5D8AD0056C0E9 /* AFPhotoEditorControllerOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPhotoEditorControllerOptions.h; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DBA696B15B805A30043E93F /* MessageUI.framework in Frameworks */,
 				6DBA68E515B7CEB50043E93F /* Twitter.framework in Frameworks */,
 				CE7A85EF15B5D9320056C0E9 /* CoreData.framework in Frameworks */,
 				CE7A85ED15B5D92B0056C0E9 /* libsqlite3.0.dylib in Frameworks */,
@@ -310,6 +313,7 @@
 		CEF3791115B5CE050062ADFB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6DBA696A15B805A30043E93F /* MessageUI.framework */,
 				6DBA68E415B7CEB50043E93F /* Twitter.framework */,
 				CE7A85EE15B5D9320056C0E9 /* CoreData.framework */,
 				CE7A85EC15B5D92B0056C0E9 /* libsqlite3.0.dylib */,

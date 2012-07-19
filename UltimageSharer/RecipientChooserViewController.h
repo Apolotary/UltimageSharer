@@ -9,11 +9,12 @@
 #import <UIKit/UIKit.h>
 #import <Twitter/Twitter.h>
 #import <Accounts/Accounts.h>
+#import <MessageUI/MessageUI.h>
 #import "ImageTools.h"
 #import "MBProgressHUD.h"
 #import "FacebookModel.h"
 
-@interface RecipientChooserViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UIDocumentInteractionControllerDelegate, MBProgressHUDDelegate>
+@interface RecipientChooserViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UIDocumentInteractionControllerDelegate, MFMailComposeViewControllerDelegate, UINavigationControllerDelegate, MBProgressHUDDelegate>
 {
     IBOutlet UITableView *_tableView;
     UIImage *_imageToSend;
@@ -25,6 +26,7 @@
     UIDocumentInteractionController *_documentInteractionController;
     MBProgressHUD *_hud;
     FacebookModel *_fbModel;
+    MFMailComposeViewController *_mailComposer;
 }
 
 @property (nonatomic, strong) UIImage *imageToSend;
