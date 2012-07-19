@@ -10,8 +10,6 @@
 
 @implementation MainViewController
 
-@synthesize documentInteractionController = _documentInteractionController;
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -52,26 +50,6 @@
     [self presentModalViewController:_imagePicker animated:YES];
 }
 
-#pragma mark - Twitter methods
-
-- (void) sendTweetWithText: (NSString *) text
-                  andImage: (UIImage *) image
-{
-    TWTweetComposeViewController *tweetViewController = [[TWTweetComposeViewController alloc] init];
-    
-    // Set the initial tweet text. See the framework for additional properties that can be set.
-    [tweetViewController setInitialText:text];
-    [tweetViewController addImage:image];
-    
-    // Create the completion handler block.
-    [tweetViewController setCompletionHandler:^(TWTweetComposeViewControllerResult result) {
-        [self dismissModalViewControllerAnimated:YES];
-    }];
-    
-    // Present the tweet composition view controller modally.
-    [self presentModalViewController:tweetViewController animated:YES];
-}
-
 #pragma mark - Showing Aviary controller
 
 - (void) showAviaryPhotoEditorWithImage: (UIImage *) image
@@ -79,42 +57,6 @@
     AFPhotoEditorController *editorController = [[AFPhotoEditorController alloc] initWithImage:image];
     [editorController setDelegate:self];
     [self presentModalViewController:editorController animated:YES];
-}
-
-#pragma mark - Showing Document Interaction controller
-
-- (void) setupControllerWithURL: (NSURL *) fileURL
-                  usingDelegate: (id <UIDocumentInteractionControllerDelegate>) interactionDelegate 
-{
-    _documentInteractionController =
-    [[UIDocumentInteractionController alloc] init];
-    [_documentInteractionController setURL:fileURL];
-    
-    _documentInteractionController.delegate = interactionDelegate;
-}
-
-- (void)documentInteractionController:(UIDocumentInteractionController *)controller willBeginSendingToApplication:(NSString *)application
-{
-    NSLog(@"%@", application);
-}
-
-- (void)documentInteractionController:(UIDocumentInteractionController *)controller didEndSendingToApplication:(NSString *)application
-{
-    
-}
-
--(void)documentInteractionControllerDidDismissOpenInMenu: (UIDocumentInteractionController *)controller 
-{
-    
-}
-
-#pragma mark - Saving images methods
-
-- (NSURL *) saveAndGetPathForImage: (UIImage *) image 
-                     withExtension: (NSString *) extension
-{
-    [ImageTools saveImage:_imageToWorkWith withName:DEFAULT_IMAGE_NAME andExtension:extension];
-    return [ImageTools getURLForImageNamed:DEFAULT_IMAGE_NAME withExtension:extension];
 }
 
 #pragma mark - UIImagePicker Delegate Methods
@@ -135,6 +77,11 @@
         [_mainImageView setImage:image];
         _imageToWorkWith = image;
     }];
+}
+
+- (void)photoEditorCanceled:(AFPhotoEditorController *)editor
+{
+    [editor dismissModalViewControllerAnimated:YES];
 }
 
 #pragma mark - ActionSheet Delegate methods
@@ -170,22 +117,11 @@
             {
                 [self showAviaryPhotoEditorWithImage:_imageToWorkWith];
             }
-            else if (buttonIndex == 1) // any image app or dropbox
+            else if (buttonIndex == 1) // show recipient picker
             {
-                NSURL *fileURL = [self saveAndGetPathForImage:_imageToWorkWith withExtension:DEFAULT_IMAGE_EXTENSION];
-                [self setupControllerWithURL:fileURL usingDelegate:self];
-                [_documentInteractionController presentOpenInMenuFromRect:CGRectZero inView:self.view animated:YES];
-            }
-            else if (buttonIndex == 2) // instagram
-            {
-                NSURL *fileURL = [self saveAndGetPathForImage:_imageToWorkWith withExtension:INSTAGRAM_EXTENSION];
-                [self setupControllerWithURL:fileURL usingDelegate:self];
-                [_documentInteractionController setUTI:INSTAGRAM_UTI];
-                [_documentInteractionController presentOpenInMenuFromRect:CGRectZero inView:self.view animated:YES];
-            }
-            else if (buttonIndex == 3) // twitter
-            {
-                [self sendTweetWithText:APP_DEFAULT_MESSAGE_TEXT andImage:_imageToWorkWith];
+                RecipientChooserViewController *recipientChooser = [[RecipientChooserViewController alloc] initWithNibName:@"RecipientChooserViewController" bundle:[NSBundle mainBundle]];
+                [recipientChooser setImageToSend:_imageToWorkWith];
+                [self.navigationController pushViewController:recipientChooser animated:YES];
             }
         }
     }
@@ -213,7 +149,7 @@
 {
     _imageWorkingMode = kImageWorkingModeSharing;
 
-    UIActionSheet *shareActionSheet = [[UIActionSheet alloc] initWithTitle:@"Share" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Edit in Aviary", @"Dropbox", @"Instagram", @"Twitter", nil];
+    UIActionSheet *shareActionSheet = [[UIActionSheet alloc] initWithTitle:@"Share" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Edit in Aviary", @"Send to...", nil];
     [shareActionSheet showInView:self.view];
 }
 

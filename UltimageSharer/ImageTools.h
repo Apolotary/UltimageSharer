@@ -17,4 +17,7 @@
 + (NSURL *) getURLForImageNamed: (NSString *) name
                   withExtension: (NSString *) extension;
 
++ (void) writeImage: (UIImage *) image toPhotoLibraryWithTarget: (id) target
+        andSelector: (SEL) selector;
+
 @end

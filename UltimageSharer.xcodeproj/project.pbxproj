@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		6DBA68E515B7CEB50043E93F /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DBA68E415B7CEB50043E93F /* Twitter.framework */; };
+		6DBA68EA15B7D5A00043E93F /* FacebookModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA68E915B7D5A00043E93F /* FacebookModel.m */; };
+		6DBA691E15B7D8230043E93F /* ToDo in Resources */ = {isa = PBXBuildFile; fileRef = 6DBA691D15B7D8230043E93F /* ToDo */; };
+		6DBA692215B7D9110043E93F /* RecipientChooserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA692015B7D9110043E93F /* RecipientChooserViewController.m */; };
+		6DBA692315B7D9110043E93F /* RecipientChooserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DBA692115B7D9110043E93F /* RecipientChooserViewController.xib */; };
 		CE7A85E215B5D8AD0056C0E9 /* libAviarySDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7A85DF15B5D8AD0056C0E9 /* libAviarySDK.a */; };
 		CE7A85E315B5D8AD0056C0E9 /* AviarySDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CE7A85E115B5D8AD0056C0E9 /* AviarySDKResources.bundle */; };
 		CE7A85E515B5D9020056C0E9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7A85E415B5D9020056C0E9 /* QuartzCore.framework */; };
@@ -29,6 +33,12 @@
 
 /* Begin PBXFileReference section */
 		6DBA68E415B7CEB50043E93F /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		6DBA68E815B7D5A00043E93F /* FacebookModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookModel.h; sourceTree = "<group>"; };
+		6DBA68E915B7D5A00043E93F /* FacebookModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookModel.m; sourceTree = "<group>"; };
+		6DBA691D15B7D8230043E93F /* ToDo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ToDo; sourceTree = "<group>"; };
+		6DBA691F15B7D9110043E93F /* RecipientChooserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipientChooserViewController.h; sourceTree = "<group>"; };
+		6DBA692015B7D9110043E93F /* RecipientChooserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipientChooserViewController.m; sourceTree = "<group>"; };
+		6DBA692115B7D9110043E93F /* RecipientChooserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecipientChooserViewController.xib; sourceTree = "<group>"; };
 		CE7A85DA15B5D8AD0056C0E9 /* AFPhotoEditorContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPhotoEditorContext.h; sourceTree = "<group>"; };
 		CE7A85DB15B5D8AD0056C0E9 /* AFPhotoEditorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPhotoEditorController.h; sourceTree = "<group>"; };
 		CE7A85DC15B5D8AD0056C0E9 /* AFPhotoEditorControllerOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPhotoEditorControllerOptions.h; sourceTree = "<group>"; };
@@ -81,9 +91,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6DBA68E715B7D57D0043E93F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6DBA68E815B7D5A00043E93F /* FacebookModel.h */,
+				6DBA68E915B7D5A00043E93F /* FacebookModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		6DBA68EB15B7D7450043E93F /* Facebook */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Facebook;
+			sourceTree = "<group>";
+		};
+		6DBA692415B7D91F0043E93F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6DBA691F15B7D9110043E93F /* RecipientChooserViewController.h */,
+				6DBA692015B7D9110043E93F /* RecipientChooserViewController.m */,
+				6DBA692115B7D9110043E93F /* RecipientChooserViewController.xib */,
+				CEF3792415B5CE050062ADFB /* MainViewController.h */,
+				CEF3792515B5CE050062ADFB /* MainViewController.m */,
+				CEF3792715B5CE050062ADFB /* MainViewController.xib */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		6DBA692515B7DAD50043E93F /* MBProgressHud */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = MBProgressHud;
+			sourceTree = "<group>";
+		};
 		CE7A85D615B5D8980056C0E9 /* 3rd-party */ = {
 			isa = PBXGroup;
 			children = (
+				6DBA692515B7DAD50043E93F /* MBProgressHud */,
+				6DBA68EB15B7D7450043E93F /* Facebook */,
 				CE7A85D815B5D8AD0056C0E9 /* AviarySDK */,
 			);
 			name = "3rd-party";
@@ -165,12 +213,11 @@
 		CEF3791815B5CE050062ADFB /* UltimageSharer */ = {
 			isa = PBXGroup;
 			children = (
+				6DBA692415B7D91F0043E93F /* ViewControllers */,
+				6DBA68E715B7D57D0043E93F /* Model */,
 				CE7A85F015B5DC1C0056C0E9 /* Tools */,
 				CEF3792115B5CE050062ADFB /* AppDelegate.h */,
 				CEF3792215B5CE050062ADFB /* AppDelegate.m */,
-				CEF3792415B5CE050062ADFB /* MainViewController.h */,
-				CEF3792515B5CE050062ADFB /* MainViewController.m */,
-				CEF3792715B5CE050062ADFB /* MainViewController.xib */,
 				CEF3791915B5CE050062ADFB /* Supporting Files */,
 			);
 			path = UltimageSharer;
@@ -184,6 +231,7 @@
 				CEF3791B15B5CE050062ADFB /* InfoPlist.strings */,
 				CEF3791E15B5CE050062ADFB /* main.m */,
 				CEF3792015B5CE050062ADFB /* UltimageSharer-Prefix.pch */,
+				6DBA691D15B7D8230043E93F /* ToDo */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -242,6 +290,8 @@
 				CEF3791D15B5CE050062ADFB /* InfoPlist.strings in Resources */,
 				CEF3792915B5CE050062ADFB /* MainViewController.xib in Resources */,
 				CE7A85E315B5D8AD0056C0E9 /* AviarySDKResources.bundle in Resources */,
+				6DBA691E15B7D8230043E93F /* ToDo in Resources */,
+				6DBA692315B7D9110043E93F /* RecipientChooserViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +306,8 @@
 				CEF3792315B5CE050062ADFB /* AppDelegate.m in Sources */,
 				CEF3792615B5CE050062ADFB /* MainViewController.m in Sources */,
 				CE7A85F315B5DE7A0056C0E9 /* ImageTools.m in Sources */,
+				6DBA68EA15B7D5A00043E93F /* FacebookModel.m in Sources */,
+				6DBA692215B7D9110043E93F /* RecipientChooserViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -31,4 +31,10 @@
     return url;
 }
 
++ (void) writeImage: (UIImage *) image toPhotoLibraryWithTarget: (id) target
+        andSelector: (SEL) selector
+{
+    UIImageWriteToSavedPhotosAlbum(image, target, selector, nil);
+}
+
 @end
